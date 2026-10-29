@@ -317,3 +317,47 @@ footer {
 .about {
   max-width: 62ch;
 }
+
+/* ---- FAQ ---- */
+.faq {
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.faq details {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent-2);
+}
+
+.faq details[open] summary::after {
+  content: "–";
+}
+
+.faq details p {
+  margin: 12px 0 0;
+}
+
+.subtle {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}

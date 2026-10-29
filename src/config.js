@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Web Wizards",
   description:
-    "Automatización para negocios locales: recordatorios de citas, reseñas y seguimiento por WhatsApp. Sin humo.",
+    "Recordatorios de cita por WhatsApp, reseñas en Google y seguimiento a clientes. Menos citas perdidas y más clientes que regresan, sin tecnicismos.",
   whatsapp: "523511778020",
   
 };
