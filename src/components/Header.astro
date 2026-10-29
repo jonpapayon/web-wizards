@@ -1,11 +1,11 @@
-
+---
 import { SITE, NAV } from "../config.js";
 
 const current = Astro.url.pathname.replace(/\/$/, "") || "/";
 const waLink = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
   `Hola, vi ${SITE.name} y quiero saber cómo automatizar mi negocio.`
 )}`;
-
+---
 
 <header class="nav">
   <div class="container nav-inner">
