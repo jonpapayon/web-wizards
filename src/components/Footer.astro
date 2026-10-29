@@ -1,0 +1,14 @@
+
+import { SITE, NAV } from "../config.js";
+
+const year = new Date().getFullYear();
+
+
+<footer>
+  <div class="container footer-inner">
+    <span>© {year} {SITE.name}</span>
+    <nav aria-label="Pie de página">
+      {NAV.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+  </div>
+</footer>

@@ -1,0 +1,27 @@
+
+import { SITE, NAV } from "../config.js";
+
+const current = Astro.url.pathname.replace(/\/$/, "") || "/";
+const waLink = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
+  `Hola, vi ${SITE.name} y quiero saber cómo automatizar mi negocio.`
+)}`;
+
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="wordmark" href="/">{SITE.name}</a>
+    <nav class="nav-links" aria-label="Principal">
+      {NAV.map((item) => (
+        <a
+          href={item.href}
+          aria-current={current === item.href ? "page" : undefined}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+    <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener">
+      WhatsApp
+    </a>
+  </div>
+</header>

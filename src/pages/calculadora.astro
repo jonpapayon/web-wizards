@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Calculator from "../components/Calculator.jsx";
+import { SITE } from "../config.js";
+---
+
+<Layout
+  title={`Calculadora de citas perdidas | ${SITE.name}`}
+  description="Calcula cuánto dinero pierde tu negocio al mes por las citas que no llegan."
+>
+  <section class="section">
+    <div class="container">
+      <h1>¿Cuánto te cuestan las citas perdidas?</h1>
+      <p>Cambia los números por los de tu negocio. Es una estimación.</p>
+      <Calculator client:visible whatsapp={SITE.whatsapp} brand={SITE.name} />
+    </div>
+  </section>
+</Layout>
