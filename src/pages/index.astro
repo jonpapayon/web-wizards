@@ -1,11 +1,127 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Calculator from "../components/Calculator.jsx";
+import { SITE } from "../config.js";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const waLink = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
+  `Hola, vi ${SITE.name} y quiero saber cómo automatizar mi negocio.`
+)}`;
+const year = new Date().getFullYear();
 ---
 
 <Layout>
-	<Welcome />
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="wordmark" href={import.meta.env.BASE_URL}>{SITE.name}</a>
+      <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>
+          Automatiza citas, seguimiento y reseñas
+          <span class="gradient"> por WhatsApp</span>
+        </h1>
+        <p>
+          Menos citas perdidas y más clientes que regresan. Sistemas simples,
+          sin humo, para negocios locales: clínicas, spas, estéticas,
+          veterinarias y talleres.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href={waLink} target="_blank" rel="noopener">
+            Escríbeme por WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#calculadora">
+            Calcula cuánto pierdes
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Qué resuelve</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Recordatorios de cita</h3>
+            <p>
+              Mensajes automáticos antes de cada cita, con opción de confirmar
+              o reagendar.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Reseñas en Google</h3>
+            <p>
+              Pide la reseña justo después de la visita y mejora cómo te
+              encuentran en Google Maps.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Seguimiento a clientes</h3>
+            <p>
+              Un mensaje a quien no ha vuelto en un tiempo, para que regrese
+              sin que tengas que acordarte.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="calculadora">
+      <div class="container">
+        <h2>¿Cuánto te cuestan las citas perdidas?</h2>
+        <p>Cambia los números por los de tu negocio. Es una estimación.</p>
+        <Calculator client:visible whatsapp={SITE.whatsapp} brand={SITE.name} />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Cómo trabajamos</h2>
+        <div class="grid grid-3 steps">
+          <div class="card">
+            <h3>Entender tu proceso</h3>
+            <p>
+              Una charla corta para ver cómo manejas hoy tus citas y dónde se
+              pierde tiempo o dinero.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Instalar lo simple</h3>
+            <p>
+              Armo solo lo necesario, sin herramientas de más ni sistemas que
+              nadie va a usar.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Medir y ajustar</h3>
+            <p>
+              Revisamos los números al mes siguiente: citas confirmadas,
+              reseñas y clientes que regresaron.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>¿Lo platicamos?</h2>
+        <p>Cuéntame cómo trabajas hoy y te digo si tiene sentido automatizarlo.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href={waLink} target="_blank" rel="noopener">
+            Escríbeme por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© {year} {SITE.name}</div>
+  </footer>
 </Layout>
