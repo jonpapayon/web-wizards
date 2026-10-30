@@ -1,0 +1,300 @@
+
+---
+---
+
+<section class="problems-section">
+  <div class="problems-container">
+
+    <div class="problems-heading">
+      <span class="section-eyebrow">
+        <span class="eyebrow-line"></span>
+        01 / EL PROBLEMA
+      </span>
+
+      <h2>
+        Tu negocio pierde dinero en lugares que
+        <span>probablemente no estás viendo.</span>
+      </h2>
+
+      <p>
+        No siempre necesitas más clientes. A veces necesitas dejar de
+        perder los que ya tienes.
+      </p>
+    </div>
+
+    <div class="problems-list">
+
+      <article class="problem-item">
+        <span class="problem-number">01</span>
+        <div class="problem-content">
+          <h3>Citas que terminan en espacios vacíos</h3>
+          <p>
+            Un cliente olvida su cita. Nadie confirma. Esa hora se pierde
+            y tu negocio deja de generar ingresos.
+          </p>
+        </div>
+        <span class="problem-arrow">↗</span>
+      </article>
+
+      <article class="problem-item">
+        <span class="problem-number">02</span>
+        <div class="problem-content">
+          <h3>Tu WhatsApp se convierte en otro trabajo</h3>
+          <p>
+            Respondes las mismas preguntas mientras intentas atender
+            tu negocio. Tu tiempo termina consumido por tareas repetitivas.
+          </p>
+        </div>
+        <span class="problem-arrow">↗</span>
+      </article>
+
+      <article class="problem-item">
+        <span class="problem-number">03</span>
+        <div class="problem-content">
+          <h3>Clientes que desaparecen</h3>
+          <p>
+            Personas que ya confiaron en ti y que nunca vuelven a recibir
+            noticias tuyas. Cada cliente olvidado es una oportunidad perdida.
+          </p>
+        </div>
+        <span class="problem-arrow">↗</span>
+      </article>
+
+      <article class="problem-item">
+        <span class="problem-number">04</span>
+        <div class="problem-content">
+          <h3>Una buena experiencia que nadie ve</h3>
+          <p>
+            Tus clientes quedan satisfechos, pero no dejan reseñas que
+            ayuden a otros a elegir tu negocio.
+          </p>
+        </div>
+        <span class="problem-arrow">↗</span>
+      </article>
+
+    </div>
+
+    <div class="problems-footer">
+      <span class="footer-indicator"></span>
+      <p>EL PROBLEMA NO ES TRABAJAR MÁS. ES TRABAJAR SIN SISTEMAS.</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .problems-section {
+    position: relative;
+    overflow: hidden;
+    padding: 115px 0;
+    background:
+      radial-gradient(
+        ellipse at 10% 50%,
+        rgba(124, 58, 237, .09),
+        transparent 45%
+      ),
+      #090912;
+  }
+
+  .problems-container {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    column-gap: 90px;
+    align-items: start;
+  }
+
+  .problems-heading {
+    position: sticky;
+    top: 110px;
+  }
+
+  .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    color: #a78bfa;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+  }
+
+  .eyebrow-line {
+    width: 25px;
+    height: 1px;
+    background: #a78bfa;
+  }
+
+  .problems-heading h2 {
+    margin: 0 0 24px;
+    color: #f4f2ff;
+    font-size: clamp(2.3rem, 4vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: -.065em;
+    line-height: 1.08;
+  }
+
+  .problems-heading h2 span {
+    display: block;
+    background: linear-gradient(100deg, #a78bfa, #8b5cf6 55%, #22d3ee);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .problems-heading > p {
+    max-width: 390px;
+    color: #a3a2b9;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .problems-list {
+    border-top: 1px solid rgba(167, 139, 250, .2);
+  }
+
+  .problem-item {
+    display: grid;
+    grid-template-columns: 38px 1fr 20px;
+    gap: 18px;
+    align-items: start;
+    padding: 30px 8px;
+    border-bottom: 1px solid rgba(167, 139, 250, .15);
+    transition: background .25s, padding .25s;
+  }
+
+  .problem-item:hover {
+    padding-left: 16px;
+    background: linear-gradient(
+      90deg,
+      rgba(139, 92, 246, .08),
+      transparent
+    );
+  }
+
+  .problem-number {
+    padding-top: 3px;
+    color: #8b5cf6;
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+  }
+
+  .problem-content h3 {
+    margin: 0 0 10px;
+    color: #f0efff;
+    font-size: 1.12rem;
+    font-weight: 700;
+    letter-spacing: -.025em;
+  }
+
+  .problem-content p {
+    max-width: 430px;
+    margin: 0;
+    color: #9291a8;
+    font-size: .91rem;
+    line-height: 1.75;
+  }
+
+  .problem-arrow {
+    color: #77738f;
+    font-size: 1.1rem;
+    transition: color .25s, transform .25s;
+  }
+
+  .problem-item:hover .problem-arrow {
+    color: #22d3ee;
+    transform: translate(3px, -3px);
+  }
+
+  .problems-footer {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .problems-footer p {
+    margin: 0;
+    color: #aaa9c0;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    line-height: 1.6;
+  }
+
+  .footer-indicator {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #22d3ee;
+    box-shadow: 0 0 12px #22d3ee;
+  }
+
+  @media (max-width: 850px) {
+    .problems-container {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+
+    .problems-heading {
+      position: static;
+    }
+
+    .problems-heading h2 {
+      max-width: 650px;
+    }
+
+    .problems-heading > p {
+      max-width: 550px;
+    }
+
+    .problems-footer {
+      grid-column: 1;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .problems-section {
+      padding: 80px 0;
+    }
+
+    .problems-container {
+      width: calc(100% - 36px);
+      gap: 30px;
+    }
+
+    .problems-heading h2 {
+      font-size: clamp(2.2rem, 10vw, 3rem);
+    }
+
+    .problem-item {
+      grid-template-columns: 28px 1fr 14px;
+      gap: 10px;
+      padding: 25px 2px;
+    }
+
+    .problem-content h3 {
+      font-size: 1rem;
+    }
+
+    .problem-content p {
+      font-size: .85rem;
+    }
+
+    .problems-footer p {
+      font-size: .59rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .problem-item,
+    .problem-arrow {
+      transition: none;
+    }
+  }
+</style>

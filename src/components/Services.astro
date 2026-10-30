@@ -1,0 +1,1008 @@
+
+---
+const { waLink } = Astro.props;
+---
+
+<section class="services-section">
+  <div class="services-container">
+
+    <div class="services-header">
+      <div>
+        <span class="services-eyebrow">
+          <span class="services-dot"></span>
+          03 / LO QUE HACEMOS
+        </span>
+
+        <h2>
+          Sistemas inteligentes.
+          <span>Problemas reales resueltos.</span>
+        </h2>
+      </div>
+
+      <p>
+        No necesitas diez herramientas diferentes. Necesitas los sistemas
+        adecuados para que tu negocio funcione mejor.
+      </p>
+    </div>
+
+    <div class="services-list">
+
+      <!-- SERVICIO 01 -->
+      <article class="service-card">
+        <div class="service-info">
+          <div class="service-meta">
+            <span class="service-number">01</span>
+            <span class="service-category">GESTIÓN DE CITAS</span>
+          </div>
+
+          <h3>Tu agenda, bajo control.</h3>
+
+          <p class="service-description">
+            Deja de perseguir confirmaciones. Un sistema que recuerda
+            automáticamente a tus clientes cuándo tienen una cita.
+          </p>
+
+          <ul class="service-features">
+            <li><span>✓</span> Recordatorios automáticos por WhatsApp</li>
+            <li><span>✓</span> Confirmaciones de asistencia</li>
+            <li><span>✓</span> Opciones para reagendar</li>
+            <li><span>✓</span> Seguimiento de citas</li>
+          </ul>
+
+          <a class="service-link" href={waLink} target="_blank" rel="noopener">
+            Conocer esta solución <span>↗</span>
+          </a>
+        </div>
+
+        <div class="service-demo appointment-demo">
+          <div class="demo-window">
+            <div class="demo-window-header">
+              <div class="demo-window-brand">
+                <span class="demo-status"></span>
+                SISTEMA DE CITAS
+              </div>
+              <span class="demo-window-dots">•••</span>
+            </div>
+
+            <div class="demo-appointment">
+              <span class="demo-label">PRÓXIMA CITA</span>
+              <div class="demo-date">
+                <strong>24</strong>
+                <span>OCT<br/>2026</span>
+              </div>
+              <div class="demo-appointment-details">
+                <strong>María González</strong>
+                <span>Consulta · 10:30 AM</span>
+              </div>
+            </div>
+
+            <div class="demo-message">
+              <div class="demo-message-top">
+                <span class="demo-whatsapp">◉</span>
+                <span>WHATSAPP AUTOMÁTICO</span>
+                <span class="demo-sent">ENVIADO</span>
+              </div>
+              <p>
+                ¡Hola, María! Te recordamos que tienes una cita mañana
+                a las 10:30 AM. ¿Nos confirmas tu asistencia?
+              </p>
+              <div class="demo-message-actions">
+                <span>Confirmar</span>
+                <span>Reagendar</span>
+              </div>
+            </div>
+
+            <div class="demo-bottom">
+              <span class="demo-check">✓</span>
+              Recordatorio programado
+            </div>
+          </div>
+
+          <div class="demo-floating-tag">
+            <span>↗</span> MENOS TAREAS MANUALES
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 02 -->
+      <article class="service-card reverse">
+        <div class="service-info">
+          <div class="service-meta">
+            <span class="service-number">02</span>
+            <span class="service-category">REPUTACIÓN DIGITAL</span>
+          </div>
+
+          <h3>Haz que tu buen servicio se note.</h3>
+
+          <p class="service-description">
+            Facilita que los clientes satisfechos compartan su experiencia
+            y construye una reputación que genere confianza.
+          </p>
+
+          <ul class="service-features">
+            <li><span>✓</span> Solicitudes de reseñas automáticas</li>
+            <li><span>✓</span> Enlace directo a Google</li>
+            <li><span>✓</span> Mensajes personalizados</li>
+            <li><span>✓</span> Seguimiento de nuevas reseñas</li>
+          </ul>
+
+          <a class="service-link" href={waLink} target="_blank" rel="noopener">
+            Conocer esta solución <span>↗</span>
+          </a>
+        </div>
+
+        <div class="service-demo reviews-demo">
+          <div class="review-window">
+            <div class="review-header">
+              <div class="review-google">G</div>
+              <div>
+                <strong>Experiencia del cliente</strong>
+                <span>Seguimiento automático</span>
+              </div>
+              <span class="review-live">ACTIVO</span>
+            </div>
+
+            <div class="review-stars">★★★★★</div>
+            <div class="review-rating-text">
+              Tu opinión ayuda a otros a encontrarnos.
+            </div>
+
+            <div class="review-divider"></div>
+
+            <div class="review-message">
+              <span class="review-message-icon">✧</span>
+              <div>
+                <strong>Mensaje posterior a la visita</strong>
+                <p>
+                  ¡Gracias por visitarnos! Nos encantaría conocer
+                  tu experiencia. ¿Nos dejas una reseña?
+                </p>
+              </div>
+            </div>
+
+            <div class="review-button">
+              Escribir una reseña <span>↗</span>
+            </div>
+
+            <div class="review-footer">
+              <span class="demo-check">✓</span>
+              Enlace directo a Google
+            </div>
+          </div>
+
+          <div class="demo-floating-tag">
+            <span>✧</span> CONFIANZA QUE SE CONSTRUYE
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 03 -->
+      <article class="service-card">
+        <div class="service-info">
+          <div class="service-meta">
+            <span class="service-number">03</span>
+            <span class="service-category">RETENCIÓN DE CLIENTES</span>
+          </div>
+
+          <h3>Que tus clientes no se olviden de ti.</h3>
+
+          <p class="service-description">
+            Mantén el contacto con personas que ya compraron o visitaron
+            tu negocio. Recupera conversaciones y oportunidades.
+          </p>
+
+          <ul class="service-features">
+            <li><span>✓</span> Seguimiento a clientes inactivos</li>
+            <li><span>✓</span> Mensajes personalizados</li>
+            <li><span>✓</span> Campañas de reactivación</li>
+            <li><span>✓</span> Seguimiento de respuestas</li>
+          </ul>
+
+          <a class="service-link" href={waLink} target="_blank" rel="noopener">
+            Conocer esta solución <span>↗</span>
+          </a>
+        </div>
+
+        <div class="service-demo followup-demo">
+          <div class="followup-window">
+            <div class="followup-header">
+              <span class="followup-avatar">WG</span>
+              <div>
+                <strong>Seguimiento de clientes</strong>
+                <span>Flujo de automatización</span>
+              </div>
+              <span class="followup-active"></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-node-icon">◎</span>
+              <div>
+                <strong>Cliente sin actividad</strong>
+                <span>Última visita: hace 60 días</span>
+              </div>
+            </div>
+
+            <div class="flow-connector">
+              <span></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-node-icon purple">◷</span>
+              <div>
+                <strong>Activar seguimiento</strong>
+                <span>Condición cumplida</span>
+              </div>
+            </div>
+
+            <div class="flow-connector">
+              <span></span>
+            </div>
+
+            <div class="flow-node highlighted">
+              <span class="flow-node-icon cyan">↗</span>
+              <div>
+                <strong>Enviar mensaje</strong>
+                <span>WhatsApp personalizado</span>
+              </div>
+            </div>
+
+            <div class="followup-result">
+              <span class="demo-check">✓</span>
+              Oportunidad de regreso
+            </div>
+          </div>
+
+          <div class="demo-floating-tag">
+            <span>↻</span> RELACIONES QUE CONTINÚAN
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="services-cta">
+      <div>
+        <span class="services-cta-label">NO TODOS LOS NEGOCIOS SON IGUALES</span>
+        <h3>Tu negocio necesita su propio sistema.</h3>
+        <p>Analizamos cómo trabajas y diseñamos una solución a tu medida.</p>
+      </div>
+
+      <a href={waLink} target="_blank" rel="noopener">
+        Hablemos de tu negocio <span>↗</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .services-section {
+    position: relative;
+    overflow: hidden;
+    padding: 115px 0;
+    background:
+      radial-gradient(ellipse at 15% 45%, rgba(139,92,246,.06), transparent 40%),
+      #090912;
+  }
+
+  .services-container {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+
+  .services-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 65px;
+  }
+
+  .services-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    color: #a78bfa;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+  }
+
+  .services-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22d3ee;
+    box-shadow: 0 0 12px #22d3ee;
+  }
+
+  .services-header h2 {
+    max-width: 700px;
+    margin: 0;
+    color: #f4f2ff;
+    font-size: clamp(2.5rem, 5vw, 4.1rem);
+    font-weight: 800;
+    letter-spacing: -.065em;
+    line-height: 1.06;
+  }
+
+  .services-header h2 span {
+    display: block;
+    background: linear-gradient(100deg, #a78bfa, #8b5cf6, #22d3ee);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .services-header > p {
+    max-width: 330px;
+    margin: 0 0 5px;
+    color: #a3a2b9;
+    font-size: .95rem;
+    line-height: 1.8;
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .service-card {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 45px;
+    align-items: center;
+    min-height: 430px;
+    padding: 40px;
+    border: 1px solid rgba(167,139,250,.16);
+    border-radius: 22px;
+    background:
+      linear-gradient(120deg, rgba(139,92,246,.045), transparent 65%),
+      #11111e;
+  }
+
+  .service-card.reverse .service-info {
+    order: 2;
+  }
+
+  .service-card.reverse .service-demo {
+    order: 1;
+  }
+
+  .service-meta {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 24px;
+  }
+
+  .service-number {
+    color: #a78bfa;
+    font-size: .85rem;
+    font-weight: 800;
+  }
+
+  .service-category {
+    color: #89869f;
+    font-size: .62rem;
+    font-weight: 800;
+    letter-spacing: .13em;
+  }
+
+  .service-info h3 {
+    max-width: 450px;
+    margin: 0 0 18px;
+    color: #f4f2ff;
+    font-size: clamp(1.9rem, 3.1vw, 2.65rem);
+    font-weight: 800;
+    letter-spacing: -.055em;
+    line-height: 1.1;
+  }
+
+  .service-description {
+    max-width: 430px;
+    margin: 0 0 24px;
+    color: #a3a2b9;
+    font-size: .94rem;
+    line-height: 1.8;
+  }
+
+  .service-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 0 28px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .service-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #d0cede;
+    font-size: .85rem;
+  }
+
+  .service-features li span {
+    color: #22d3ee;
+    font-weight: 800;
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #c4b5fd;
+    font-size: .88rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .2s, gap .2s;
+  }
+
+  .service-link:hover {
+    gap: 18px;
+    color: #22d3ee;
+  }
+
+  /* DEMOSTRACIONES */
+
+  .service-demo {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 330px;
+    border: 1px solid rgba(167,139,250,.12);
+    border-radius: 17px;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(139,92,246,.13), transparent 65%),
+      #0b0b16;
+  }
+
+  .demo-window,
+  .review-window,
+  .followup-window {
+    width: min(100% - 50px, 390px);
+    padding: 20px;
+    border: 1px solid rgba(167,139,250,.2);
+    border-radius: 15px;
+    background: rgba(20,19,37,.96);
+    box-shadow: 0 20px 55px rgba(0,0,0,.3);
+  }
+
+  .demo-window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  .demo-window-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #aaa8c0;
+    font-size: .61rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+  }
+
+  .demo-status,
+  .followup-active {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22d3ee;
+    box-shadow: 0 0 9px #22d3ee;
+  }
+
+  .demo-window-dots {
+    color: #77738f;
+    letter-spacing: 3px;
+  }
+
+  .demo-appointment {
+    padding: 20px 0;
+  }
+
+  .demo-label {
+    color: #88869e;
+    font-size: .58rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+  }
+
+  .demo-date {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0;
+  }
+
+  .demo-date strong {
+    color: #f4f2ff;
+    font-size: 2.5rem;
+    letter-spacing: -.06em;
+  }
+
+  .demo-date span {
+    color: #a78bfa;
+    font-size: .66rem;
+    font-weight: 800;
+    line-height: 1.5;
+  }
+
+  .demo-appointment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .demo-appointment-details strong {
+    color: white;
+    font-size: .83rem;
+  }
+
+  .demo-appointment-details span {
+    color: #9290a7;
+    font-size: .72rem;
+  }
+
+  .demo-message {
+    padding: 14px;
+    border: 1px solid rgba(34,211,238,.16);
+    border-radius: 12px;
+    background: rgba(34,211,238,.045);
+  }
+
+  .demo-message-top {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #a3a2b9;
+    font-size: .53rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+  }
+
+  .demo-whatsapp {
+    color: #22d3ee;
+    font-size: .95rem;
+  }
+
+  .demo-sent {
+    margin-left: auto;
+    color: #4ade80;
+    font-size: .5rem;
+  }
+
+  .demo-message p {
+    margin: 13px 0;
+    color: #d9d7e9;
+    font-size: .72rem;
+    line-height: 1.6;
+  }
+
+  .demo-message-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .demo-message-actions span {
+    flex: 1;
+    padding: 8px 5px;
+    border: 1px solid rgba(34,211,238,.25);
+    border-radius: 6px;
+    color: #67e8f9;
+    font-size: .62rem;
+    text-align: center;
+  }
+
+  .demo-bottom,
+  .review-footer,
+  .followup-result {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    color: #9d9bb1;
+    font-size: .65rem;
+  }
+
+  .demo-check {
+    color: #4ade80;
+    font-weight: 800;
+  }
+
+  .demo-floating-tag {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    border: 1px solid rgba(167,139,250,.2);
+    border-radius: 8px;
+    background: #17152a;
+    color: #aaa8c0;
+    font-size: .55rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+  }
+
+  .demo-floating-tag span {
+    color: #22d3ee;
+  }
+
+  /* RESEÑAS */
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .review-google {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: rgba(255,255,255,.07);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  .review-header > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .review-header strong {
+    color: #f0efff;
+    font-size: .72rem;
+  }
+
+  .review-header > div span {
+    color: #9290a7;
+    font-size: .61rem;
+  }
+
+  .review-live {
+    margin-left: auto;
+    color: #4ade80;
+    font-size: .53rem;
+    font-weight: 800;
+  }
+
+  .review-stars {
+    margin-top: 26px;
+    color: #facc15;
+    font-size: 1.8rem;
+    letter-spacing: .13em;
+  }
+
+  .review-rating-text {
+    margin-top: 5px;
+    color: #c4c2d5;
+    font-size: .78rem;
+  }
+
+  .review-divider {
+    height: 1px;
+    margin: 22px 0;
+    background: rgba(255,255,255,.08);
+  }
+
+  .review-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .review-message-icon {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: rgba(139,92,246,.15);
+    color: #c4b5fd;
+  }
+
+  .review-message strong {
+    color: #eeeaff;
+    font-size: .73rem;
+  }
+
+  .review-message p {
+    margin: 7px 0 0;
+    color: #a3a2b9;
+    font-size: .7rem;
+    line-height: 1.65;
+  }
+
+  .review-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 12px 14px;
+    border: 1px solid rgba(167,139,250,.3);
+    border-radius: 8px;
+    background: rgba(139,92,246,.12);
+    color: #c4b5fd;
+    font-size: .7rem;
+    font-weight: 700;
+  }
+
+  /* SEGUIMIENTO */
+
+  .followup-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 23px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  .followup-avatar {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #8b5cf6, #22d3ee);
+    color: white;
+    font-size: .65rem;
+    font-weight: 800;
+  }
+
+  .followup-header > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .followup-header strong {
+    color: #f0efff;
+    font-size: .73rem;
+  }
+
+  .followup-header > div span {
+    color: #9290a7;
+    font-size: .61rem;
+  }
+
+  .followup-active {
+    margin-left: auto;
+  }
+
+  .flow-node {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid rgba(167,139,250,.15);
+    border-radius: 9px;
+    background: rgba(255,255,255,.025);
+  }
+
+  .flow-node.highlighted {
+    border-color: rgba(34,211,238,.3);
+    background: rgba(34,211,238,.055);
+  }
+
+  .flow-node-icon {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(255,255,255,.06);
+    color: #c4c2d5;
+  }
+
+  .flow-node-icon.purple {
+    background: rgba(139,92,246,.15);
+    color: #c4b5fd;
+  }
+
+  .flow-node-icon.cyan {
+    background: rgba(34,211,238,.12);
+    color: #67e8f9;
+  }
+
+  .flow-node div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .flow-node strong {
+    color: #eae8fa;
+    font-size: .71rem;
+  }
+
+  .flow-node div span {
+    color: #9290a7;
+    font-size: .61rem;
+  }
+
+  .flow-connector {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+  }
+
+  .flow-connector span {
+    width: 1px;
+    background: linear-gradient(#8b5cf6, #22d3ee);
+  }
+
+  .followup-result {
+    justify-content: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+
+  /* CTA FINAL */
+
+  .services-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 55px;
+    padding: 35px 40px;
+    border: 1px solid rgba(139,92,246,.25);
+    border-radius: 17px;
+    background:
+      radial-gradient(ellipse at 15% 50%, rgba(139,92,246,.15), transparent 55%),
+      #11101e;
+  }
+
+  .services-cta-label {
+    color: #a78bfa;
+    font-size: .61rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+  }
+
+  .services-cta h3 {
+    margin: 10px 0 7px;
+    color: #f4f2ff;
+    font-size: 1.45rem;
+    letter-spacing: -.04em;
+  }
+
+  .services-cta p {
+    margin: 0;
+    color: #a3a2b9;
+    font-size: .85rem;
+  }
+
+  .services-cta > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+    padding: 15px 19px;
+    border-radius: 9px;
+    background: linear-gradient(110deg, #8b5cf6, #6d5ae8);
+    color: white;
+    font-size: .82rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0 25px rgba(139,92,246,.18);
+    transition: transform .2s, box-shadow .2s;
+  }
+
+  .services-cta > a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px rgba(139,92,246,.35);
+  }
+
+  @media (max-width: 850px) {
+    .services-header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .service-card {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    .service-card.reverse .service-info,
+    .service-card.reverse .service-demo {
+      order: initial;
+    }
+
+    .service-demo {
+      min-height: 350px;
+    }
+
+    .services-cta {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .services-section {
+      padding: 80px 0;
+    }
+
+    .services-container {
+      width: calc(100% - 36px);
+    }
+
+    .services-header {
+      margin-bottom: 35px;
+    }
+
+    .services-header h2 {
+      font-size: 2.7rem;
+    }
+
+    .service-card {
+      gap: 25px;
+      padding: 22px 17px;
+      border-radius: 15px;
+    }
+
+    .service-info h3 {
+      font-size: 2rem;
+    }
+
+    .service-demo {
+      min-height: 340px;
+    }
+
+    .demo-window,
+    .review-window,
+    .followup-window {
+      width: calc(100% - 24px);
+      padding: 15px;
+    }
+
+    .demo-floating-tag {
+      right: 8px;
+      bottom: 8px;
+      font-size: .48rem;
+    }
+
+    .services-cta {
+      margin-top: 35px;
+      padding: 25px 20px;
+    }
+
+    .services-cta h3 {
+      font-size: 1.3rem;
+    }
+
+    .services-cta > a {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .service-link,
+    .services-cta > a {
+      transition: none;
+    }
+  }
+</style>

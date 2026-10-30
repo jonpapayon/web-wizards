@@ -1,0 +1,274 @@
+
+---
+const faqs = [
+  {
+    question: "¿Cuánto cuesta implementar una solución?",
+    answer:
+      "Depende del problema, el alcance y las herramientas necesarias. Primero analizamos tu operación y después proponemos una solución con costos claros. No necesitas contratar un proyecto enorme para empezar."
+  },
+  {
+    question: "¿Necesito conocimientos técnicos?",
+    answer:
+      "No. Diseñamos sistemas para que puedas utilizarlos en tu operación diaria sin tener que programar ni entender cómo funciona cada herramienta por dentro."
+  },
+  {
+    question: "¿Tengo que cambiar las herramientas que ya utilizo?",
+    answer:
+      "No necesariamente. Primero revisamos qué utilizas actualmente y qué se puede aprovechar. La prioridad es mejorar tu operación, no reemplazar herramientas sin una razón."
+  },
+  {
+    question: "¿Cuánto tiempo tarda la implementación?",
+    answer:
+      "Depende de la complejidad del proyecto. Una automatización sencilla puede implementarse mucho más rápido que un sistema que involucra varios procesos. Definimos tiempos y etapas antes de comenzar."
+  },
+  {
+    question: "¿Qué tipo de negocios pueden trabajar con Web Wizards?",
+    answer:
+      "Trabajamos con pequeñas y medianas empresas que buscan mejorar sus procesos, atención al cliente, seguimiento comercial y organización interna mediante tecnología."
+  },
+  {
+    question: "¿Ofrecen soporte después de implementar?",
+    answer:
+      "El acompañamiento depende del proyecto. Podemos ayudarte a revisar el funcionamiento, resolver problemas y optimizar los procesos conforme cambien las necesidades de tu negocio."
+  }
+];
+---
+
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="faq-heading">
+      <span class="faq-eyebrow">
+        <span class="faq-dot"></span>
+        PREGUNTAS FRECUENTES
+      </span>
+
+      <h2>
+        Antes de dar<br />
+        <span>el siguiente paso.</span>
+      </h2>
+
+      <p>
+        Las dudas más comunes antes de llevar la tecnología
+        a la operación de un negocio.
+      </p>
+
+      <a class="faq-contact" href="#contacto">
+        ¿Tienes otra pregunta? Hablemos <span>↗</span>
+      </a>
+    </div>
+
+    <div class="faq-list">
+      {faqs.map((faq, index) => (
+        <details class="faq-item" open={index === 0}>
+          <summary>
+            <span class="faq-number">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <span class="faq-question">{faq.question}</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </summary>
+
+          <div class="faq-answer">
+            <p>{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-section {
+    padding: 125px 24px;
+    background:
+      radial-gradient(ellipse at 5% 55%, rgba(128,91,255,.07), transparent 35%),
+      #08080d;
+    color: #f4f2fa;
+  }
+
+  .faq-inner {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 100px;
+    width: min(1120px, 100%);
+    margin: 0 auto;
+  }
+
+  .faq-heading {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+  }
+
+  .faq-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #aaa3bd;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .18em;
+  }
+
+  .faq-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #a58aff;
+    box-shadow: 0 0 12px #916cff;
+  }
+
+  .faq-heading h2 {
+    margin: 22px 0 18px;
+    font-size: clamp(39px, 5vw, 61px);
+    line-height: .99;
+    letter-spacing: -.065em;
+  }
+
+  .faq-heading h2 span {
+    color: #8e78ee;
+  }
+
+  .faq-heading > p {
+    max-width: 350px;
+    color: #9693a3;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .faq-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    color: #c5b5ff;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .faq-contact span {
+    font-size: 17px;
+  }
+
+  .faq-list {
+    border-top: 1px solid rgba(255,255,255,.12);
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,.12);
+  }
+
+  .faq-item summary {
+    display: grid;
+    grid-template-columns: 35px 1fr 25px;
+    align-items: center;
+    gap: 15px;
+    min-height: 82px;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-number {
+    color: #8f78ec;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .faq-question {
+    color: #e9e6f1;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    transition: color .2s ease;
+  }
+
+  .faq-item summary:hover .faq-question {
+    color: #bcaaff;
+  }
+
+  .faq-toggle {
+    position: relative;
+    width: 23px;
+    height: 23px;
+    border: 1px solid rgba(165,138,255,.35);
+    border-radius: 50%;
+  }
+
+  .faq-toggle::before,
+  .faq-toggle::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 6px;
+    width: 9px;
+    height: 1px;
+    background: #b9a5ff;
+    transition: transform .2s ease;
+  }
+
+  .faq-toggle::after {
+    transform: rotate(90deg);
+  }
+
+  .faq-item[open] .faq-toggle::after {
+    transform: rotate(0);
+  }
+
+  .faq-answer {
+    padding: 0 40px 25px 50px;
+    animation: faqReveal .25s ease;
+  }
+
+  .faq-answer p {
+    max-width: 510px;
+    margin: 0;
+    color: #9995a5;
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  @keyframes faqReveal {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 850px) {
+    .faq-inner {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+
+    .faq-heading {
+      position: static;
+    }
+
+    .faq-heading h2 br {
+      display: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .faq-section { padding: 85px 19px; }
+    .faq-heading h2 { font-size: 42px; }
+    .faq-item summary {
+      grid-template-columns: 25px 1fr 23px;
+      gap: 10px;
+      min-height: 75px;
+    }
+    .faq-question { font-size: 12px; }
+    .faq-answer { padding: 0 28px 22px 35px; }
+    .faq-answer p { font-size: 11px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-answer { animation: none; }
+    .faq-question,
+    .faq-toggle::before,
+    .faq-toggle::after { transition: none; }
+  }
+</style>

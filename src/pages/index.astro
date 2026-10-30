@@ -1,6 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { SITE } from "../config.js";
+import Hero from "../components/Hero.astro";
+import Problems from "../components/Problems.astro";
+import Benefits from "../components/Benefits.astro";
+import Services from "../components/Services.astro";
+import Process from "../components/Process.astro";
+import FreeTools from "../components/FreeTools.astro";
+import FAQ from "../components/FAQ.astro";
+import FinalCTA from "../components/FinalCTA.astro";
 
 const waLink = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
   `Hola, vi ${SITE.name} y quiero saber cómo automatizar mi negocio.`
@@ -11,256 +19,20 @@ const waLink = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
   title={`Recordatorios de cita por WhatsApp para negocios | ${SITE.name}`}
   description="Menos citas perdidas y más clientes que regresan: recordatorios de cita, reseñas en Google y seguimiento por WhatsApp para clínicas, spas, estéticas y talleres."
 >
-  <section class="hero">
-    <div class="container">
-      <span class="eyebrow">✨ Automatización para negocios locales</span>
-      <h1>
-        Deja de perder citas y de perseguir clientes 
-        <span class="gradient"> por WhatsApp</span>
-      </h1>
-      <p>
-        Recordatorios automáticos, reseñas en Google y seguimiento a quienes
-        dejaron de venir. Todo en el canal donde tus clientes ya te escriben.
-      </p>
-      <div class="actions">
-        <a class="btn btn-primary" href="/calculadora">
-          Calcula cuánto te cuesta
-        </a>
-        <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener">
-          Escribir por WhatsApp
-        </a>
-      </div>
-      <p class="subtle">
-        Para clínicas, consultorios, spas, estéticas, veterinarias y talleres.
-      </p>
-    </div>
-  </section>
+<Hero waLink={waLink} />
 
-  <section class="section">
-    <div class="container">
-      <h2>¿Te suena familiar?</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>Un cliente no llegó y esa hora ya no se recupera</h3>
-          <p>
-            Cada turno vacío es dinero que no vuelve. Casi siempre fue un
-            olvido, no mala intención.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Pasas el día contestando lo mismo</h3>
-          <p>
-            Horarios, precios, confirmaciones y cambios de cita. Mensajes
-            repetidos que te quitan tiempo de lo que sí importa.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Nadie le escribió al cliente que dejó de venir</h3>
-          <p>
-            Atender bien y luego no volver a saber de esa persona es una de las
-            formas más caras de perder ventas.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Atiendes excelente, pero casi nadie lo dice en Google</h3>
-          <p>
-            Con pocas reseñas, el cliente nuevo duda o se va con el competidor
-            que sí tiene.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<Problems />
 
-  <section class="section">
-    <div class="container">
-      <h2>Lo que cambia cuando lo automatizas</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>Agenda más llena</h3>
-          <p>
-            Recordatorios con opción de confirmar o reagendar con un toque,
-            para que queden menos huecos.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Horas de vuelta</h3>
-          <p>
-            Lo repetitivo lo hace el sistema. Tú te dedicas a atender a las
-            personas.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Clientes que regresan</h3>
-          <p>
-            Un mensaje a tiempo reactiva a quien ya te compró una vez, sin que
-            tengas que acordarte.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Mejor imagen en Google</h3>
-          <p>
-            Más reseñas, más confianza y más gente que te encuentra cuando
-            busca en Google Maps.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Cifras claras</h3>
-          <p>
-            Citas confirmadas, reagendadas y reseñas nuevas. Sabes si funciona
-            porque lo mides.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<Benefits />
 
-  <section class="section">
-    <div class="container">
-      <h2>Los hechizos de la casa</h2>
-      <p>Tres automatizaciones simples para lo que más se te escapa.</p>
-      <div class="grid grid-3">
-        <div class="card">
-          <span class="card-tag">Recordatorios de cita por WhatsApp</span>
-          <h3>El hechizo de la agenda llena</h3>
-          <p>
-            Un mensaje antes de cada cita para confirmar o reagendar. Menos
-            huecos en tu agenda y cero llamadas de recordatorio.
-          </p>
-        </div>
-        <div class="card">
-          <span class="card-tag">Reseñas en Google</span>
-          <h3>El hechizo de las cinco estrellas</h3>
-          <p>
-            Después de cada visita, un mensaje amable con el enlace directo
-            para dejar su opinión. Más reseñas sin pedirlas una por una.
-          </p>
-        </div>
-        <div class="card">
-          <span class="card-tag">Seguimiento a clientes</span>
-          <h3>El hechizo del regreso</h3>
-          <p>
-            Un mensaje automático a quienes llevan tiempo sin venir. Reactivas
-            clientes dormidos sin esfuerzo.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<Services waLink={waLink} />
+  
+<Process />
 
-  <section class="section">
-    <div class="container">
-      <h2>Así funciona</h2>
-      <div class="grid grid-3 steps">
-        <div class="card">
-          <h3>Revisar cómo trabajas hoy</h3>
-          <p>
-            Una charla corta sobre tu agenda, tus mensajes y dónde se pierde
-            tiempo o dinero.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Instalar solo lo necesario</h3>
-          <p>
-            Automatizaciones simples que se adaptan a tu forma de trabajar, sin
-            sistemas complicados que nadie usa.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Medir y mejorar</h3>
-          <p>
-            Cada mes se revisan citas confirmadas, reseñas y clientes que
-            volvieron, para ajustar lo que haga falta.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<FreeTools />
 
-  <section class="section">
-    <div class="container">
-      <h2>Herramientas gratis</h2>
-      <p>Úsalas sin compromiso para ver dónde se te va el dinero.</p>
-      <div class="grid grid-3">
-        <a class="card link" href="/calculadora">
-          <span class="card-tag">Calculadora</span>
-          <h3>Citas perdidas</h3>
-          <p>Calcula cuánto dejas de ganar al mes cuando un cliente no llega.</p>
-        </a>
-        <div class="card soon">
-          <span class="card-tag">Próximamente</span>
-          <h3>Diagnóstico de procesos</h3>
-          <p>
-            Ocho preguntas para saber qué parte de tu negocio automatizar
-            primero.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<FAQ/>
 
-  <section class="section">
-    <div class="container">
-      <h2>Preguntas frecuentes</h2>
-      <div class="faq">
-        <details>
-          <summary>¿Funciona para mi tipo de negocio?</summary>
-          <p>
-            Si trabajas con citas o con clientes que deben volver (clínicas,
-            consultorios, spas, estéticas, veterinarias, talleres), tiene
-            sentido evaluarlo.
-          </p>
-        </details>
-        <details>
-          <summary>¿Tengo que cambiar de sistema o de programa?</summary>
-          <p>
-            Se parte de cómo trabajas hoy y se agrega solo lo necesario, sin
-            reemplazar todo lo que ya usas.
-          </p>
-        </details>
-        <details>
-          <summary>¿Los mensajes suenan a robot?</summary>
-          <p>
-            Se escriben con tu tono y se limitan a lo útil: recordar, confirmar
-            y reagendar. Nada de spam.
-          </p>
-        </details>
-        <details>
-          <summary>¿Es seguro para los datos de mis clientes?</summary>
-          <p>
-            Solo se usan los datos mínimos para el recordatorio: nombre,
-            teléfono y hora de la cita. No se manejan diagnósticos ni
-            historiales clínicos.
-          </p>
-        </details>
-        <details>
-          <summary>¿Cuánto cuesta?</summary>
-          <p>
-            Depende del tamaño de tu negocio y de lo que necesites. Escribe por
-            WhatsApp y te damos un estimado.
-          </p>
-        </details>
-        <details>
-          <summary>¿Cómo sé si está funcionando?</summary>
-          <p>
-            Se mide desde el primer mes: citas confirmadas, reagendadas y
-            reseñas nuevas, para que veas el cambio con números.
-          </p>
-        </details>
-      </div>
-    </div>
-  </section>
+<FinalCTA waLink={waLink} />
 
-  <section class="section">
-    <div class="container">
-      <h2>¿Cuántas citas se te están yendo cada mes?</h2>
-      <p>Haz la cuenta en un minuto. Es gratis y no necesitas dejar tus datos.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="/calculadora">Calcular mi pérdida</a>
-        <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener">
-          Escribir por WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
 </Layout>

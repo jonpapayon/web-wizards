@@ -1,0 +1,414 @@
+
+---
+---
+
+<section class="tools-section" id="herramientas">
+  <div class="tools-inner">
+    <div class="tools-intro">
+      <span class="tools-eyebrow">
+        <span class="tools-dot"></span>
+        LABORATORIO WEB WIZARDS
+      </span>
+
+      <h2>
+        Antes de invertir,<br />
+        <span>empieza por entender.</span>
+      </h2>
+
+      <p>
+        Descubre cuánto tiempo consume tu operación y dónde podrías
+        estar perdiendo oportunidades.
+      </p>
+    </div>
+
+    <div class="tools-grid">
+      <article class="tool-card calculator-card">
+        <div class="tool-top">
+          <span class="tool-number">HERRAMIENTA 01</span>
+          <span class="tool-icon">◷</span>
+        </div>
+
+        <div class="tool-content">
+          <span class="tool-category">TIEMPO Y PRODUCTIVIDAD</span>
+          <h3>¿Cuánto tiempo estás perdiendo?</h3>
+          <p>
+            Calcula cuánto tiempo consume una tarea repetitiva
+            a lo largo de un mes.
+          </p>
+        </div>
+
+        <div class="calculator-preview">
+          <div class="preview-row">
+            <span>Mensajes manuales</span>
+            <span>30 min / día</span>
+          </div>
+          <div class="preview-row">
+            <span>Seguimiento de clientes</span>
+            <span>45 min / día</span>
+          </div>
+          <div class="preview-row">
+            <span>Confirmación de citas</span>
+            <span>20 min / día</span>
+          </div>
+          <div class="preview-total">
+            <span>TIEMPO RECUPERABLE</span>
+            <strong>31.6 <small>horas / mes</small></strong>
+          </div>
+          <span class="preview-disclaimer">EJEMPLO ILUSTRATIVO</span>
+        </div>
+
+        <a class="tool-link" href="#contacto">
+          Explorar herramienta <span>↗</span>
+        </a>
+      </article>
+
+      <article class="tool-card diagnosis-card">
+        <div class="tool-top">
+          <span class="tool-number">HERRAMIENTA 02</span>
+          <span class="tool-icon diagnosis-icon">✳</span>
+        </div>
+
+        <div class="tool-content">
+          <span class="tool-category">OPERACIONES Y AUTOMATIZACIÓN</span>
+          <h3>¿Qué debería automatizar tu negocio?</h3>
+          <p>
+            Identifica procesos repetitivos y descubre dónde
+            tiene sentido aplicar tecnología.
+          </p>
+        </div>
+
+        <div class="diagnosis-preview">
+          <div class="diagnosis-line">
+            <span class="diagnosis-check">✓</span>
+            <span>Atención y seguimiento de clientes</span>
+            <span class="diagnosis-status">ANALIZAR</span>
+          </div>
+          <div class="diagnosis-line">
+            <span class="diagnosis-check">✓</span>
+            <span>Agendamiento y recordatorios</span>
+            <span class="diagnosis-status">ANALIZAR</span>
+          </div>
+          <div class="diagnosis-line">
+            <span class="diagnosis-check">✓</span>
+            <span>Captura y organización de datos</span>
+            <span class="diagnosis-status">ANALIZAR</span>
+          </div>
+          <div class="diagnosis-footer">
+            <span>3 ÁREAS PARA EXPLORAR</span>
+            <span class="diagnosis-spark">✳</span>
+          </div>
+        </div>
+
+        <a class="tool-link" href="#contacto">
+          Explorar herramienta <span>↗</span>
+        </a>
+      </article>
+    </div>
+
+    <div class="tools-bottom">
+      <span class="tools-bottom-mark">W.</span>
+      <p>La mejor automatización empieza con la pregunta correcta.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tools-section {
+    padding: 125px 24px;
+    background:
+      radial-gradient(ellipse at 90% 20%, rgba(72, 193, 255, .07), transparent 35%),
+      #0b0b12;
+    color: #f4f2fa;
+  }
+
+  .tools-inner {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+  }
+
+  .tools-intro {
+    max-width: 650px;
+    margin-bottom: 65px;
+  }
+
+  .tools-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #aaa3bd;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .18em;
+  }
+
+  .tools-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #58d8ff;
+    box-shadow: 0 0 12px rgba(88,216,255,.8);
+  }
+
+  .tools-intro h2 {
+    margin: 22px 0 18px;
+    font-size: clamp(39px, 5.5vw, 66px);
+    line-height: .99;
+    letter-spacing: -.065em;
+  }
+
+  .tools-intro h2 span {
+    color: #8e78ee;
+  }
+
+  .tools-intro > p {
+    max-width: 470px;
+    color: #9693a3;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .tool-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 15px;
+    background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.012));
+    transition: border-color .25s ease, transform .25s ease;
+  }
+
+  .tool-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(153,125,255,.35);
+  }
+
+  .tool-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tool-number {
+    color: #8f89a0;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .16em;
+  }
+
+  .tool-icon {
+    color: #b8a4ff;
+    font-size: 27px;
+  }
+
+  .diagnosis-icon {
+    color: #69dfff;
+  }
+
+  .tool-content {
+    margin: 38px 0 25px;
+  }
+
+  .tool-category {
+    color: #a18be9;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .14em;
+  }
+
+  .diagnosis-card .tool-category {
+    color: #66cfe9;
+  }
+
+  .tool-content h3 {
+    max-width: 370px;
+    margin: 12px 0;
+    font-size: clamp(23px, 3vw, 30px);
+    line-height: 1.12;
+    letter-spacing: -.045em;
+  }
+
+  .tool-content p {
+    max-width: 390px;
+    margin: 0;
+    color: #9693a3;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .calculator-preview,
+  .diagnosis-preview {
+    min-height: 205px;
+    padding: 19px;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 10px;
+    background: rgba(5,5,10,.45);
+  }
+
+  .preview-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    color: #a9a5b5;
+    font-size: 10px;
+  }
+
+  .preview-row span:last-child {
+    color: #e0d8ff;
+    white-space: nowrap;
+  }
+
+  .preview-total {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .preview-total > span,
+  .preview-disclaimer {
+    color: #8d85a1;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .13em;
+  }
+
+  .preview-total strong {
+    color: #b6a0ff;
+    font-size: 27px;
+    letter-spacing: -.04em;
+  }
+
+  .preview-total small {
+    color: #aaa3bd;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .preview-disclaimer {
+    display: block;
+    margin-top: 8px;
+    font-size: 7px;
+  }
+
+  .diagnosis-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .diagnosis-line {
+    display: grid;
+    grid-template-columns: 20px 1fr auto;
+    align-items: center;
+    gap: 8px;
+    color: #c4c0ce;
+    font-size: 10px;
+  }
+
+  .diagnosis-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    border: 1px solid rgba(87,216,255,.35);
+    border-radius: 4px;
+    color: #65dfff;
+    font-size: 10px;
+  }
+
+  .diagnosis-status {
+    color: #65dfff;
+    font-size: 7px;
+    letter-spacing: .08em;
+  }
+
+  .diagnosis-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.07);
+    color: #8d85a1;
+    font-size: 8px;
+    letter-spacing: .12em;
+  }
+
+  .diagnosis-spark {
+    color: #65dfff;
+    font-size: 18px;
+  }
+
+  .tool-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    color: #d4c9ff;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .tool-link span {
+    font-size: 17px;
+    transition: transform .2s ease;
+  }
+
+  .tool-link:hover span {
+    transform: translate(3px, -3px);
+  }
+
+  .tools-bottom {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 35px;
+  }
+
+  .tools-bottom-mark {
+    color: #8f78ec;
+    font-size: 19px;
+    font-weight: 800;
+  }
+
+  .tools-bottom p {
+    margin: 0;
+    color: #8f8a9b;
+    font-size: 11px;
+  }
+
+  @media (max-width: 760px) {
+    .tools-section { padding: 90px 20px; }
+    .tools-grid { grid-template-columns: 1fr; }
+    .tools-intro { margin-bottom: 42px; }
+    .tool-card { padding: 24px; }
+    .tool-content { margin-top: 28px; }
+  }
+
+  @media (max-width: 420px) {
+    .tools-section { padding: 75px 18px; }
+    .tools-intro h2 { font-size: 39px; }
+    .tool-card { padding: 20px; }
+    .diagnosis-line { font-size: 9px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tool-card,
+    .tool-link span { transition: none; }
+  }
+</style>

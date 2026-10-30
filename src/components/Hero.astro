@@ -1,0 +1,540 @@
+
+---
+const { waLink } = Astro.props;
+---
+
+<section class="hero hero-future">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+
+  <div class="container hero-layout">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="status-dot"></span>
+        AUTOMATIZACIÓN INTELIGENTE PARA NEGOCIOS
+      </div>
+
+      <h1>
+        Tu negocio no necesita
+        <span class="gradient">más trabajo.</span>
+        Necesita mejores sistemas.
+      </h1>
+
+      <p class="hero-description">
+        Automatiza recordatorios de citas, recupera clientes y consigue
+        más reseñas en Google. Menos tareas repetitivas, más tiempo
+        para hacer crecer tu negocio.
+      </p>
+
+      <div class="actions hero-actions">
+        <a class="btn btn-primary" href="/calculadora">
+          Calcula cuánto estás perdiendo
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener">
+          Hablar con un asesor
+        </a>
+      </div>
+
+      <div class="hero-trust">
+        <span>✦</span>
+        Para clínicas, consultorios, spas, estéticas y talleres.
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-label="Demostración visual de un sistema de recordatorios automatizados">
+      <div class="visual-orbit orbit-one"></div>
+      <div class="visual-orbit orbit-two"></div>
+
+      <div class="visual-core">
+        <div class="core-inner">
+          <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M32 5L54 18V46L32 59L10 46V18L32 5Z"
+              stroke="url(#coreGradient)" stroke-width="1.5"/>
+            <path d="M32 19V45M19 32H45"
+              stroke="url(#coreGradient)" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="coreGradient" x1="10" y1="5" x2="54" y2="59">
+                <stop stop-color="#A78BFA"/>
+                <stop offset="1" stop-color="#22D3EE"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <div class="system-card appointment-card">
+        <div class="system-card-top">
+          <span class="system-icon">◷</span>
+          <span class="system-label">RECORDATORIO</span>
+          <span class="system-live">ACTIVO</span>
+        </div>
+        <div class="appointment-title">Próxima cita</div>
+        <div class="appointment-time">10:30 AM</div>
+        <div class="system-divider"></div>
+        <div class="system-status">
+          <span class="status-dot"></span>
+          Recordatorio enviado
+        </div>
+      </div>
+
+      <div class="system-card whatsapp-card">
+        <div class="system-card-top">
+          <span class="whatsapp-symbol">◉</span>
+          <span class="system-label">WHATSAPP</span>
+        </div>
+        <div class="message-bubble">
+          ¡Hola, María! Te recordamos tu cita de mañana a las 10:30.
+        </div>
+        <div class="message-reply">
+          <span>✓</span> Confirmada
+        </div>
+      </div>
+
+      <div class="system-card automation-card">
+        <span class="automation-icon">✦</span>
+        <div>
+          <div class="automation-title">Sistema automático</div>
+          <div class="automation-subtitle">Sin intervención manual</div>
+        </div>
+        <span class="automation-check">✓</span>
+      </div>
+
+      <div class="visual-caption">
+        <span class="caption-line"></span>
+        SISTEMAS QUE TRABAJAN POR TI
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-bottom-line"></div>
+</section>
+
+<style>
+  .hero-future {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 660px;
+    padding: 100px 0 90px;
+    background:
+      radial-gradient(ellipse at 75% 45%, rgba(104, 65, 210, .13), transparent 40%),
+      #080810;
+  }
+
+  .hero-grid-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .15;
+    background-image:
+      linear-gradient(rgba(167,139,250,.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(167,139,250,.12) 1px, transparent 1px);
+    background-size: 55px 55px;
+    mask-image: linear-gradient(to bottom, black, transparent 90%);
+  }
+
+  .hero-glow {
+    position: absolute;
+    z-index: -1;
+    width: 600px;
+    height: 600px;
+    right: 5%;
+    top: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124,58,237,.15), transparent 68%);
+    filter: blur(25px);
+  }
+
+  .hero-layout {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 14px;
+    margin-bottom: 26px;
+    border: 1px solid rgba(167,139,250,.25);
+    border-radius: 100px;
+    background: rgba(139,92,246,.07);
+    color: #c4b5fd;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .11em;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #22d3ee;
+    box-shadow: 0 0 12px #22d3ee;
+  }
+
+  .hero-content h1 {
+    max-width: 680px;
+    margin-bottom: 24px;
+    font-size: clamp(2.7rem, 5.3vw, 4.8rem);
+    font-weight: 800;
+    letter-spacing: -.065em;
+    line-height: 1.03;
+  }
+
+  .hero-content .gradient {
+    display: block;
+    background: linear-gradient(100deg, #a78bfa 5%, #8b5cf6 48%, #22d3ee 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .hero-description {
+    max-width: 490px;
+    color: #aaa9c0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    margin-top: 30px;
+    gap: 14px;
+  }
+
+  .hero-actions .btn {
+    padding: 16px 20px;
+    font-size: .92rem;
+  }
+
+  .hero-actions .btn-primary {
+    box-shadow: 0 0 28px rgba(139,92,246,.24);
+    transition: transform .25s, box-shadow .25s;
+  }
+
+  .hero-actions .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 38px rgba(139,92,246,.42);
+  }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 30px;
+    color: #88879e;
+    font-size: .83rem;
+  }
+
+  .hero-trust span {
+    color: #22d3ee;
+  }
+
+  /* Visualización */
+
+  .hero-visual {
+    position: relative;
+    min-height: 490px;
+    display: grid;
+    place-items: center;
+  }
+
+  .visual-orbit {
+    position: absolute;
+    width: 370px;
+    height: 370px;
+    border: 1px solid rgba(167,139,250,.16);
+    border-radius: 50%;
+  }
+
+  .orbit-one {
+    transform: rotateX(65deg) rotate(-20deg);
+  }
+
+  .orbit-two {
+    width: 290px;
+    height: 430px;
+    transform: rotate(45deg);
+    border-color: rgba(34,211,238,.12);
+  }
+
+  .visual-core {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 160px;
+    height: 160px;
+    border: 1px solid rgba(167,139,250,.4);
+    border-radius: 38px;
+    background: linear-gradient(145deg, rgba(139,92,246,.25), rgba(34,211,238,.08));
+    box-shadow: 0 0 90px rgba(139,92,246,.24), inset 0 0 30px rgba(167,139,250,.12);
+    transform: rotate(-12deg);
+    animation: coreFloat 6s ease-in-out infinite;
+  }
+
+  .core-inner {
+    display: grid;
+    place-items: center;
+    width: 105px;
+    height: 105px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 27px;
+    background: rgba(12,12,28,.8);
+    transform: rotate(12deg);
+  }
+
+  .core-inner svg {
+    width: 58px;
+    filter: drop-shadow(0 0 12px rgba(167,139,250,.65));
+  }
+
+  .system-card {
+    position: absolute;
+    z-index: 2;
+    padding: 17px;
+    border: 1px solid rgba(167,139,250,.22);
+    border-radius: 15px;
+    background: rgba(17,17,34,.88);
+    box-shadow: 0 15px 50px rgba(0,0,0,.3);
+    backdrop-filter: blur(16px);
+  }
+
+  .appointment-card {
+    top: 38px;
+    right: -5px;
+    width: 215px;
+  }
+
+  .whatsapp-card {
+    bottom: 55px;
+    left: -5px;
+    width: 240px;
+    border-color: rgba(34,211,238,.25);
+  }
+
+  .automation-card {
+    bottom: 0;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 12px 15px;
+  }
+
+  .system-card-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .system-icon, .whatsapp-symbol {
+    color: #a78bfa;
+    font-size: 1.1rem;
+  }
+
+  .whatsapp-symbol {
+    color: #22d3ee;
+  }
+
+  .system-label {
+    color: #aaa9c0;
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+  }
+
+  .system-live {
+    margin-left: auto;
+    color: #4ade80;
+    font-size: .55rem;
+    font-weight: 800;
+  }
+
+  .appointment-title {
+    margin-top: 18px;
+    color: #aaa9c0;
+    font-size: .8rem;
+  }
+
+  .appointment-time {
+    margin-top: 2px;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -.04em;
+  }
+
+  .system-divider {
+    height: 1px;
+    margin: 12px 0;
+    background: rgba(255,255,255,.09);
+  }
+
+  .system-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #aaa9c0;
+    font-size: .7rem;
+  }
+
+  .message-bubble {
+    margin-top: 13px;
+    padding: 12px;
+    border-radius: 10px 10px 10px 2px;
+    background: rgba(34,211,238,.09);
+    color: #d8d8e8;
+    font-size: .76rem;
+    line-height: 1.5;
+  }
+
+  .message-reply {
+    margin-top: 10px;
+    color: #4ade80;
+    font-size: .72rem;
+    text-align: right;
+  }
+
+  .automation-icon {
+    display: grid;
+    place-items: center;
+    width: 33px;
+    height: 33px;
+    border-radius: 9px;
+    background: rgba(139,92,246,.18);
+    color: #c4b5fd;
+  }
+
+  .automation-title {
+    color: white;
+    font-size: .72rem;
+    font-weight: 700;
+  }
+
+  .automation-subtitle {
+    color: #9291a8;
+    font-size: .61rem;
+  }
+
+  .automation-check {
+    color: #4ade80;
+  }
+
+  .visual-caption {
+    position: absolute;
+    top: 50%;
+    right: -35px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #77768d;
+    font-size: .57rem;
+    letter-spacing: .14em;
+    writing-mode: vertical-rl;
+  }
+
+  .caption-line {
+    width: 1px;
+    height: 35px;
+    background: #8b5cf6;
+  }
+
+  .hero-bottom-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139,92,246,.4), rgba(34,211,238,.3), transparent);
+  }
+
+  @keyframes coreFloat {
+    0%, 100% { transform: translateY(0) rotate(-12deg); }
+    50% { transform: translateY(-12px) rotate(-8deg); }
+  }
+
+  @media (max-width: 900px) {
+    .hero-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+      text-align: center;
+    }
+
+    .hero-content h1, .hero-description {
+      margin-inline: auto;
+    }
+
+    .hero-actions, .hero-trust {
+      justify-content: center;
+    }
+
+    .hero-visual {
+      width: min(100%, 530px);
+      margin: 10px auto 0;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .hero-future {
+      padding: 70px 0 55px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 11vw, 3.4rem);
+    }
+
+    .hero-eyebrow {
+      font-size: .58rem;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .hero-actions .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    .hero-trust {
+      font-size: .72rem;
+    }
+
+    .hero-visual {
+      min-height: 390px;
+      transform: scale(.88);
+      transform-origin: top center;
+      margin-bottom: -35px;
+    }
+
+    .appointment-card {
+      right: -5px;
+    }
+
+    .whatsapp-card {
+      left: -8px;
+    }
+
+    .visual-caption {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .visual-core {
+      animation: none;
+    }
+  }
+</style>

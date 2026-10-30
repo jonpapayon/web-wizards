@@ -1,14 +1,301 @@
+
 ---
 import { SITE, NAV } from "../config.js";
 
 const year = new Date().getFullYear();
+
+const waLink = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
+  `Hola, vi ${SITE.name} y quiero saber cómo automatizar mi negocio.`
+)}`;
+
+const services = [
+  "Automatización de procesos",
+  "Atención y seguimiento",
+  "Transformación digital"
+];
 ---
 
-<footer>
-  <div class="container footer-inner">
-    <span>© {year} {SITE.name}</span>
-    <nav aria-label="Pie de página">
-      {NAV.map((item) => <a href={item.href}>{item.label}</a>)}
-    </nav>
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="footer-logo" href="/" aria-label={`${SITE.name}, inicio`}>
+          <span class="footer-symbol">W<span>.</span></span>
+          <span>{SITE.name}</span>
+        </a>
+
+        <p>
+          Tecnología aplicada a negocios reales.
+          Diseñamos mejores sistemas para trabajar
+          con menos fricción.
+        </p>
+
+        <a
+          class="footer-contact"
+          href={waLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Iniciar una conversación <span>↗</span>
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">EXPLORA</span>
+        <nav aria-label="Navegación del pie de página">
+          {NAV.map((item) => (
+            <a href={item.href}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <span class="footer-heading">QUÉ HACEMOS</span>
+        <nav aria-label="Servicios">
+          {services.map((service) => (
+            <a href="/#servicios">{service}</a>
+          ))}
+        </nav>
+      </div>
+
+      <div class="footer-column footer-contact-column">
+        <span class="footer-heading">CONTACTO</span>
+        <span class="footer-location">México</span>
+        <a href={waLink} target="_blank" rel="noopener noreferrer">
+          WhatsApp <span>↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="copyright">
+        © {year} {SITE.name}. Todos los derechos reservados.
+      </span>
+
+      <span class="footer-mantra">
+        MENOS FRICCIÓN. MEJORES SISTEMAS.
+      </span>
+
+      <a class="back-top" href="#top" aria-label="Volver arriba">
+        VOLVER ARRIBA ↑
+      </a>
+    </div>
+
   </div>
 </footer>
+
+<style>
+  .site-footer {
+    position: relative;
+    overflow: hidden;
+    padding: 75px 24px 25px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    background:
+      radial-gradient(ellipse at 10% 0%, rgba(125,85,255,.07), transparent 40%),
+      #08080d;
+    color: #f4f2fa;
+  }
+
+  .footer-inner {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr 1.2fr .8fr;
+    gap: 55px;
+    padding-bottom: 65px;
+  }
+
+  .footer-brand {
+    max-width: 290px;
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: #f4f2fa;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -.05em;
+    text-decoration: none;
+  }
+
+  .footer-symbol {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(165,138,255,.4);
+    border-radius: 9px;
+    background: linear-gradient(145deg, rgba(143,112,255,.2), rgba(143,112,255,.04));
+    font-size: 16px;
+  }
+
+  .footer-symbol span {
+    color: #a58aff;
+  }
+
+  .footer-brand > p {
+    margin: 22px 0;
+    color: #9693a3;
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .footer-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #c3b2ff;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .footer-contact span {
+    font-size: 16px;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 19px;
+  }
+
+  .footer-heading {
+    color: #8e78ee;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .16em;
+  }
+
+  .footer-column nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-column a {
+    color: #a5a1b0;
+    font-size: 11px;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: color .2s ease;
+  }
+
+  .footer-column a:hover {
+    color: #fff;
+  }
+
+  .footer-location {
+    color: #a5a1b0;
+    font-size: 11px;
+  }
+
+  .footer-contact-column > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-contact-column > a span {
+    color: #a58aff;
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 23px;
+    border-top: 1px solid rgba(255,255,255,.09);
+  }
+
+  .copyright,
+  .footer-mantra,
+  .back-top {
+    color: #777185;
+    font-size: 8px;
+    letter-spacing: .1em;
+  }
+
+  .footer-mantra {
+    font-weight: 700;
+  }
+
+  .back-top {
+    color: #aaa0c8;
+    text-decoration: none;
+    transition: color .2s ease;
+  }
+
+  .back-top:hover {
+    color: #fff;
+  }
+
+  @media (max-width: 850px) {
+    .footer-main {
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 35px;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+      max-width: 400px;
+    }
+
+    .footer-bottom {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .site-footer {
+      padding: 65px 20px 22px;
+    }
+
+    .footer-main {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 20px;
+      padding-bottom: 45px;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 15px;
+    }
+
+    .footer-mantra {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .back-top {
+      grid-column: 2;
+      grid-row: 1 / 3;
+      align-self: center;
+    }
+
+    .copyright {
+      line-height: 1.7;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-column a,
+    .back-top {
+      transition: none;
+    }
+  }
+</style>

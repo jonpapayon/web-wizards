@@ -1,0 +1,208 @@
+
+---
+const { waLink } = Astro.props;
+---
+
+<section class="final-cta" id="contacto">
+  <div class="cta-glow"></div>
+
+  <div class="cta-inner">
+    <span class="cta-eyebrow">
+      <span class="cta-dot"></span>
+      TU SIGUIENTE PASO
+    </span>
+
+    <div class="cta-main">
+      <h2>
+        Tu negocio puede<br />
+        <span>funcionar mejor.</span>
+      </h2>
+
+      <p>
+        Cuéntanos cómo trabajas. Encontraremos oportunidades
+        para simplificar procesos, recuperar tiempo y aprovechar
+        mejor la tecnología.
+      </p>
+
+      <a class="cta-button" href={waLink} target="_blank" rel="noopener noreferrer">
+        Hablemos de tu negocio
+        <span class="cta-arrow">↗</span>
+      </a>
+
+      <span class="cta-note">
+        SIN COMPROMISO · EMPECEMOS POR ENTENDER EL PROBLEMA
+      </span>
+    </div>
+
+    <div class="cta-bottom">
+      <span class="cta-brand">WEB WIZARDS<span>.</span></span>
+      <span class="cta-bottom-text">MENOS FRICCIÓN. MEJORES SISTEMAS.</span>
+      <span class="cta-symbol">✳</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .final-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 24px 35px;
+    background: #0a0911;
+    color: #f6f3ff;
+  }
+
+  .cta-glow {
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    width: 850px;
+    height: 650px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(
+      ellipse,
+      rgba(119, 77, 255, .2),
+      rgba(66, 111, 255, .07) 40%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .cta-inner {
+    position: relative;
+    width: min(1120px, 100%);
+    margin: 0 auto;
+  }
+
+  .cta-eyebrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    color: #aaa3bd;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .19em;
+  }
+
+  .cta-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #a58aff;
+    box-shadow: 0 0 12px #916cff;
+  }
+
+  .cta-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 45px 0 105px;
+  }
+
+  .cta-main h2 {
+    margin: 0;
+    font-size: clamp(48px, 8vw, 94px);
+    font-weight: 750;
+    line-height: .95;
+    letter-spacing: -.075em;
+  }
+
+  .cta-main h2 span {
+    color: #a38aff;
+    text-shadow: 0 0 45px rgba(137,103,255,.2);
+  }
+
+  .cta-main > p {
+    max-width: 500px;
+    margin: 28px 0 32px;
+    color: #aaa5b8;
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    min-height: 56px;
+    padding: 0 24px;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 7px;
+    background: linear-gradient(110deg, #8765ee, #6550d7);
+    box-shadow: 0 10px 40px rgba(106,76,220,.22);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 45px rgba(106,76,220,.35);
+  }
+
+  .cta-arrow {
+    font-size: 18px;
+    transition: transform .2s ease;
+  }
+
+  .cta-button:hover .cta-arrow {
+    transform: translate(3px, -3px);
+  }
+
+  .cta-note {
+    margin-top: 17px;
+    color: #777185;
+    font-size: 8px;
+    letter-spacing: .12em;
+  }
+
+  .cta-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,.1);
+  }
+
+  .cta-brand {
+    color: #e9e5f2;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -.05em;
+  }
+
+  .cta-brand span {
+    color: #9c7eff;
+  }
+
+  .cta-bottom-text {
+    color: #777185;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .15em;
+  }
+
+  .cta-symbol {
+    color: #a58aff;
+    font-size: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .final-cta { padding: 90px 20px 25px; }
+    .cta-main { padding: 40px 0 75px; }
+    .cta-main h2 { font-size: clamp(44px, 11vw, 65px); }
+    .cta-main > p { font-size: 12px; }
+    .cta-bottom-text { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cta-button,
+    .cta-arrow { transition: none; }
+  }
+</style>
